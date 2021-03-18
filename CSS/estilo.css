@@ -18,6 +18,25 @@ body {
     overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
 }
+.gotop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index:100;
+    bottom: 10vh; 
+    left: 0;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    border-radius: 50%;
+    background:linear-gradient(to top,var(--red),transparent);
+}
+.gotop:hover {
+    cursor: pointer;
+    background:linear-gradient(to top,var(--blue),transparent);
+    z-index: 100;
+}
 /** Generals**/
 /**navigation menu**/
 .header{
@@ -30,12 +49,12 @@ body {
     left: 0;
     width: 100%;
     height: 60px;
+    min-height: 60px;
     background: #fff;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 9999;
 }
 
 .menu .logo-box {
@@ -73,7 +92,7 @@ body {
     background-color: var(--red);
     color: white;
 }
-.list-li a:hover{
+.list-li:hover > a{
     background-color: var(--red);
     color: white;
 }
@@ -92,6 +111,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    z-index: 101;
    
 }
 .img_header-welcome{
@@ -110,6 +130,7 @@ body {
     font-size: 50px;
     color: white;
     font-weight: 200;
+    text-align: center;
 }
 .img-header hr{
     width: 400px;
@@ -122,6 +143,7 @@ body {
     font-size: 20px;
     color: white;
     margin-top: 20px;
+    text-align: center;
 }
 .img-header .img_header-godown{
     width: 170px;
@@ -586,5 +608,70 @@ body {
 }
 /**Formulary-Footer**/
 
+/**Media Query**/
 
+@media only screen and (max-width:790px){
+    .menu{
+        display: flex;
+    }
 
+    .btn-menu > .fa-bars{
+        display: block;
+        position: absolute;
+        right: 20px ;
+        top: 0px;
+        font-size: 30px;
+        padding: 20px;
+        color: var(--red);
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    .list-conteiner{
+        display:flex;
+        top: 60px;
+        width: 100%;
+        height: calc(100vh - 60px);
+        height: 100vh;
+    }  
+    .list-ul{
+        height: calc(100vh - 60px);
+        width: 50vw;
+        top:60px;
+        right: 0px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: white;
+    }
+    .list-ul .list-li{
+        width: 100%;
+        font-size: 50px;
+        font-weight: 700;
+        border-bottom: 1px solid var(--red);
+        flex-grow: 1;
+    }
+
+    .img_header-welcome{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .img-header .img_header-welcome h2{
+        font-size: 35px;
+    }
+    .img-header .img_header-welcome hr{
+        width: 200px;
+    }
+    .img-header .img_header-welcome p{
+        width: 300px;
+        font-size: 18px;
+    }
+
+    .header .menu .logo-box h1 a{
+        font-size: 30px;
+    }
+
+}
