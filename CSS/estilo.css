@@ -144,6 +144,7 @@ body {
 .about_us{
     width: 100%;
     margin-top: 10px;
+    
 }
 .about_us .about_us-infoconteiner{  
     margin: auto;
@@ -152,7 +153,8 @@ body {
     flex-direction: column;
     align-items: center;
     background: var(--white);
-    clip-path: polygon(-10px 0%, 100% 7%, 100% 90%, 7% 100%);
+    clip-path: polygon(-10px 0%, 100% 7%, 100% 93%, 7% 100%);
+    
 }
 
 .about_us-tittle{
@@ -160,18 +162,17 @@ body {
     display: flex;
     width: 80%;
     justify-content: center;
-    
 }
 .about_us .about_us-infoconteiner .about_us-tittle h2{
     width: 450px;
     font-size: 40px;
     font-weight: 400;
-    color: var(--black);
     text-align: center;
     padding: 10px;
     border: 1px solid var(--red);
+    border-top: none;
+    border-right: none;
     color: var(--red);
-    border-radius: 24px;
 }
 .about_us .about_us-infoconteiner p{
     width: 80%;
@@ -180,7 +181,6 @@ body {
     font-size: 18px;
     color:var(--black);
     line-height: 35px;
-    border-top: 1px solid var(--red);
     border-bottom: 1px solid var(--red);
 }
 .about_us .about_us-gallery {
@@ -235,9 +235,10 @@ body {
 }
 
 .samples_infoconteiner .samples_tittle{
-    padding-top: 10px;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
+    min-width: 350px;
     
 }
 .samples_infoconteiner .samples_tittle h2{
@@ -318,6 +319,7 @@ body {
     width: 100vw;
     background-size: cover;
     clip-path: polygon(0% 0%, 97% 0%, 100% 100%, 3% 100%);
+    margin-bottom: 100px;
 }
 
 .testimony_infocontiner .testimony_deg{
@@ -334,6 +336,7 @@ body {
     padding-top: 10px;
     display: flex;
     justify-content: center;
+    min-width: 350px;
 }
 
 .testimony_infocontiner .testimony_tittle h2{
@@ -426,4 +429,162 @@ body {
     transition: 0.4s;
 }
 /**Testimonials**/
+/**Formulary-Footer**/
+
+.footer{
+    margin-top: 100px;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    background: url(../imagenes/estudiodetatuajeFooter.png);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer_tittle{
+    margin: 20px;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-bottom: 20px;
+    z-index: 99;
+    min-width: 350px;
+    }
+
+.footer_tittle h3{
+    width: 350px;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid var(--red);
+    color: #fff;
+    border-radius: 10px;
+}
+    
+
+.footer_deg{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+.footer_infoconteiner{
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#footer_formulary{
+    display:flex;
+    width: 40%;
+    height: 100%;    
+    margin: 20px;
+    flex-direction: column;
+    align-self: flex-end;
+    align-items:center;
+    min-width: 350px;
+}
+
+#footer_formulary input,textarea,label,button{
+    align-self: center;
+    
+
+}
+#footer_formulary input{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid var(--red);
+    border-radius: 10px;
+    margin: 5px;
+    outline: none;
+    text-align: center;
+    background: linear-gradient(to right,black, transparent);
+    color: var(--blue);
+}
+#footer_formulary textarea{
+    resize: none;
+    width: 80%;
+    height: 140px;
+    border: 1px solid var(--red);
+    border-radius: 10px;
+    margin: 5px;
+    outline: none;
+    text-align: center;
+    background: linear-gradient(to right,black, transparent);
+    color: var(--blue);
+}
+#footer_formulary input::placeholder{
+    color: var(--red);
+    font-family: 'Raleway', sans-serif;
+}
+#footer_formulary textarea::placeholder{
+    color: var(--red);
+    font-family: 'Raleway', sans-serif;
+}
+
+#footer_formulary input:focus{
+    border: 1px solid var(--blue);
+    text-align: start;
+}
+#footer_formulary textarea:focus{
+    border: 1px solid var(--blue);
+    text-align: start;
+}
+
+.new{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 20px;
+}
+.new label{
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 80%;
+    min-width: 350px;
+}
+.new .btn{
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+    background: var(--red);
+    border:none;
+    border-radius: 24px;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.new .btn:hover{
+    background: var(--blue);
+}
+.new .btn:active{
+	background: linear-gradient(to bottom,var(--red), transparent);
+    outline: none;
+}
+
+.footer_text{
+    z-index: 99;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    align-self: flex-start;
+}
+/**Formulary-Footer**/
+
+
 

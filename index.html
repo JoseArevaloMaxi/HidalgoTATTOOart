@@ -149,19 +149,23 @@
 
 <footer class="footer">
     <div class="footer_deg"></div>
-
-    <div class="footer_z-axis-conteiner">
+    <div class="footer_tittle">
+        <h3>Contactanos</h3>
+    </div>  
         <div class="footer_infoconteiner">
-            <h3>Formulario de Contacto</h3>
-            <hr>
-            <form>
-                <input type="text" name="user" id="" placeholder="Nombre y Apellido">
-                <input type="email" name="email" id="" placeholder="Email">
-                <input type="text" name="phone" id="" placeholder="Nro de Tlf (Opcional)">
-                <textarea name="message" placeholder="Escribe aqui tu mensaje para nosotros"></textarea>
-                <label>Te responderemos lo antes posible a tu email o por mensaje de texto si nos dejas tu nro</label>
-                <button class="formulary_btn">Enviar</button>
+
+            <div class="new">
+                <label>Te responderemos lo antes posible via email o por mensaje de texto si nos dejas tu nro</label>
+                <input type="submit" placeholder="Enviar" class="btn" form="footer_formulary"> 
+            </div>
+
+            <form id="footer_formulary">
+                <input type="text" class="user" id="" placeholder="Nombre y Apellido" required>
+                <input type="email" class="email" id="" placeholder="Email" required>
+                <input type="text" class="phone" id="" placeholder="Nro de Tlf Movil (Opcional)" minlength="10">
+                <textarea class="message" placeholder="Escribe aqui tu mensaje para nosotros" required></textarea>  
             </form>
+            
         </div>
     </div>
 
