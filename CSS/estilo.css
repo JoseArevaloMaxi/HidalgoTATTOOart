@@ -54,11 +54,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 9999;
+    z-index: 999999999;
+    
 }
 
 .menu .logo-box {
     text-align: center;
+    ;
 }
 .menu .logo-box h1 a {
     text-decoration: none;
@@ -133,11 +135,11 @@ body {
     text-align: center;
 }
 .img-header hr{
-    width: 400px;
+    width: 500px;
     height: 2px;
     background: white;
     border: none;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .img-header p{
     font-size: 20px;
@@ -192,9 +194,10 @@ body {
     text-align: center;
     padding: 10px;
     border: 1px solid var(--red);
-    border-top: none;
-    border-right: none;
+    border-bottom: none;
     color: var(--red);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .about_us .about_us-infoconteiner p{
     width: 80%;
@@ -204,6 +207,7 @@ body {
     color:var(--black);
     line-height: 35px;
     border-bottom: 1px solid var(--red);
+    border-top: 1px solid var(--red);
 }
 .about_us .about_us-gallery {
     width: 100%;
@@ -275,7 +279,10 @@ body {
     padding-top:10px;
     padding-bottom: 10px;
     border: 1px solid var(--red);
-    border-radius: 10px;
+    border-bottom: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
 }
 
 .samples_infoconteiner hr{
@@ -362,7 +369,7 @@ body {
 }
 
 .testimony_infocontiner .testimony_tittle h2{
-    width: 800px;
+    width: 600px;
     color: white;
     font-size: 30px;
     font-weight: 400;
@@ -373,7 +380,9 @@ body {
     padding-top:10px;
     padding-bottom: 10px;
     border: 1px solid var(--red);
-    border-radius: 10px;
+    border-bottom: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .testimony_infocontiner hr{
@@ -477,13 +486,14 @@ body {
     }
 
 .footer_tittle h3{
-    width: 350px;
+    width: 250px;
     font-size: 40px;
     font-weight: 400;
     text-align: center;
-    border: 1px solid var(--red);
+    border-bottom: 1px solid var(--red);
+    border-left: 1px solid var(--red) ;
     color: #fff;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
     
 
@@ -561,13 +571,13 @@ body {
     text-align: start;
 }
 
-.new{
+.send{
     display: flex;
     flex-direction: column;
     width: 40%;
     margin: 20px;
 }
-.new label{
+.send label{
     margin-top: 10px;
     color: white;
     font-size: 20px;
@@ -578,7 +588,7 @@ body {
     width: 80%;
     min-width: 350px;
 }
-.new .btn{
+.send .btn{
     width: 170px;
     height: 40px;
     font-size: 15px;
@@ -590,10 +600,10 @@ body {
     cursor: pointer;
     margin-bottom: 10px;
 }
-.new .btn:hover{
+.send .btn:hover{
     background: var(--blue);
 }
-.new .btn:active{
+.send .btn:active{
 	background: linear-gradient(to bottom,var(--red), transparent);
     outline: none;
 }
@@ -613,21 +623,25 @@ body {
 @media only screen and (max-width:790px){
     .menu{
         display: flex;
+        border-bottom:1px solid var(--red)
     }
 
     .btn-menu > .fa-bars{
-        display: block;
-        position: absolute;
-        right: 20px ;
-        top: 0px;
         font-size: 30px;
         padding: 20px;
         color: var(--red);
+        display: block;
+        position: absolute;
+        text-align: center;
+        right: 00px ;
+        top: 0px;
         cursor: pointer;
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 60px;  
     }
-
+    .btn-menu > .fa-bars:hover{
+        color: var(--blue);
+    }
     .list-conteiner{
         display:flex;
         top: 60px;
@@ -639,11 +653,10 @@ body {
         height: calc(100vh - 60px);
         width: 50vw;
         top:60px;
-        right: 0px;
+        right: -50vw; /** valor para modificar con JS**/
         position: absolute;
         display: flex;
         flex-direction: column;
-        background: white;
     }
     .list-ul .list-li{
         width: 100%;
@@ -651,6 +664,7 @@ body {
         font-weight: 700;
         border-bottom: 1px solid var(--red);
         flex-grow: 1;
+        background: linear-gradient(to bottom, white, var(--white));
     }
 
     .img_header-welcome{
@@ -663,7 +677,8 @@ body {
         font-size: 35px;
     }
     .img-header .img_header-welcome hr{
-        width: 200px;
+        margin-top: 10px;
+        width: 400px;
     }
     .img-header .img_header-welcome p{
         width: 300px;
