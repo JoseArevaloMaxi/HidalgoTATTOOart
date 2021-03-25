@@ -54,6 +54,30 @@ let actualSection = window.pageYOffset;
         menu.style.transition = "0.5s";
     }
     previousSection = actualSection;
-}
 
+//
+const gotop = document.querySelector(".gotop");
+let up = window.pageYOffset;
 
+    if (up <= 400){
+        menu.style.borderBottom = "none"; /* #08d9d6 #ff2e63 */
+        gotop.style.bottom = "-10vh";
+    }
+    else{
+        menu.style.borderBottom = "4px solid #08d9d6" /* #08d9d6 #ff2e63 */
+        gotop.style.bottom = "20vh";
+        gotop.style.transition = "0.8s";
+    }
+};
+const gotop = document.querySelector(".gotop");
+    gotop.addEventListener(`click`, to0);
+        function to0(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+const viewmore = document.querySelector(".img_header-godown"); 
+    viewmore.addEventListener(`click`, godown);   
+        function godown(){
+            document.body.scrollTop = 600;
+            document.documentElement.scrollTop = 600;
+        };
