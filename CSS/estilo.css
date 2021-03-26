@@ -89,7 +89,6 @@ body {
     font-size: 16px;
     border-radius: 24px;
     transition: 0.3s;
-      
 }
 .list-li .active{
     background-color: var(--red);
@@ -115,7 +114,8 @@ body {
     background-position: center;
     background-size: cover;
     z-index: 101;
-   
+    clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 0% 100%);
+
 }
 .img_header-welcome{
     display: flex;
@@ -178,7 +178,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: var(--white);
-    clip-path: polygon(-10px 0%, 100% 7%, 100% 93%, 7% 100%);
+    clip-path: polygon(-10px 0%, 100% 4%, 100% 94%, 7% 100%);
     
 }
 
@@ -409,12 +409,13 @@ body {
 .testimony_item-li-conteiner{
     display: flex;
     width: 36vw;
-    min-width: 320px;
+    min-width: 300px;
     height: auto;
     text-align: justify;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    align-self: center;
     margin:0 10px 20px 10px;
     cursor: pointer;
 }
@@ -532,6 +533,7 @@ body {
 
 }
 #footer_formulary input{
+    height: 50px;
     width: 80%;
     padding: 10px;
     border: 1px solid var(--red);
@@ -587,7 +589,7 @@ body {
     text-align: center;
     margin-bottom: 10px;
     width: 80%;
-    min-width: 350px;
+    min-width: 300px;
 }
 .send .btn{
     width: 170px;
@@ -620,8 +622,88 @@ body {
 /**Formulary-Footer**/
 
 /**Media Query**/
-
 @media only screen and (max-width:790px){
+    .menu{
+        display: flex;
+        border-bottom:1px solid var(--red)
+    }
+
+    .btn-menu > .fa-bars{
+        font-size: 40px;
+        padding: 10px;
+        color: var(--red);
+        display: block;
+        position: absolute;
+        text-align: center;
+        right: 00px ;
+        top: 0px;
+        cursor: pointer;
+        width: 80px;
+        height: 60px;  
+    }
+    .btn-menu > .fa-bars:hover{
+        color: var(--blue);
+    }
+    .list-conteiner{
+        display:flex;
+        top: 60px;
+        width: 100%;
+        height: calc(100vh - 60px);
+        height: 100vh;
+    }  
+    .list-ul{
+        height: calc(100vh - 60px);
+        width: 50vw;
+        top:60px;
+        right: -50vw; /** valor para modificar con JS**/
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+    .list-ul .list-li{
+        width: 100%;
+        height: fit-content;
+        padding-top: 30%;
+        padding-bottom: 30%;
+        border-bottom: 1px solid var(--red);
+        flex-grow: 1;
+        background: linear-gradient(to bottom, white, var(--white));
+    }
+    .list-ul .list-li a{
+        font-size: 35px;
+        font-weight: 900;
+    }
+
+    .img_header-welcome{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .img-header .img_header-welcome h2{
+        font-size: 50px;
+    }
+    .img-header .img_header-welcome hr{
+        margin-top: 10px;
+        width: 400px;
+    }
+    .img-header .img_header-welcome p{
+        width: 90%;
+        font-size: 28px;
+    }
+
+    .header .menu .logo-box h1 a{
+        font-size: 50px;
+    }
+    .img-header .img_header-welcome .img_header-godown{
+        width: 300px;
+        height: 80px;
+        font-size: 28px;
+    }
+
+}
+
+@media only screen and (max-width:500px){
     .menu{
         display: flex;
         border-bottom:1px solid var(--red)
@@ -661,11 +743,13 @@ body {
     }
     .list-ul .list-li{
         width: 100%;
-        font-size: 50px;
-        font-weight: 700;
+
         border-bottom: 1px solid var(--red);
         flex-grow: 1;
         background: linear-gradient(to bottom, white, var(--white));
+    }
+    .list-ul .list-li a{
+        font-size: 20px;
     }
 
     .img_header-welcome{
@@ -682,12 +766,17 @@ body {
         width: 400px;
     }
     .img-header .img_header-welcome p{
-        width: 300px;
+        width: 90%;
         font-size: 18px;
     }
 
     .header .menu .logo-box h1 a{
         font-size: 30px;
+    }
+    .img-header .img_header-welcome .img_header-godown{
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
     }
 
 }

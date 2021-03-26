@@ -78,6 +78,6 @@ const gotop = document.querySelector(".gotop");
 const viewmore = document.querySelector(".img_header-godown"); 
     viewmore.addEventListener(`click`, godown);   
         function godown(){
-            document.body.scrollTop = 600;
-            document.documentElement.scrollTop = 600;
+            document.body.scrollTop = 700;
+            document.documentElement.scrollTop = 700;
         };
